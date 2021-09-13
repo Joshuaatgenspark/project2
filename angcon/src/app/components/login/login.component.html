@@ -1,13 +1,7 @@
-<div class="container">
-  <div class="alert alert-success" *ngIf="message" role="alert">
-    {{ message }}
-  </div>
-</div>
 
 <div class="login-box bg-dark">
   <h2>Login</h2>
-  <form #loginForm="ngForm"
-    (submit)="onLoginSubmit(loginForm.value)">
+  <form #loginForm="ngForm">
     <div class="user-box">
       <input type="text" name="username" required="true" />
       <label>Username</label>
