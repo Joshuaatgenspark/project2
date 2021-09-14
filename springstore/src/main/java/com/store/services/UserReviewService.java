@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.store.UserReviews;
+import com.store.entity.UserReviews;
 
 @Service
 public interface UserReviewService {

@@ -1,4 +1,4 @@
-export class User {
-    name: string | undefined;
-    email: string | undefined;
+export interface IUser {
+    name: string;
+    email: string;
 }
