@@ -6,8 +6,8 @@ import java.util.Objects;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.store.User;
-import com.store.UserRepository;
+import com.store.entity.User;
+import com.store.repositories.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService{

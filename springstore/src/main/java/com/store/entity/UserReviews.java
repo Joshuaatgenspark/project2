@@ -1,4 +1,4 @@
-package com.store;
+package com.store.entity;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;
