@@ -54,10 +54,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-	<groupId>com.thetransactioncompany</groupId>
-	<artifactId>cors-filter</artifactId>
-	<version>[ version ]</version>
-</dependency>
+			<groupId>com.thetransactioncompany</groupId>
+			<artifactId>cors-filter</artifactId>
+			<version>[ version ]</version>
+		</dependency>
 	</dependencies>
 
 	<build>
