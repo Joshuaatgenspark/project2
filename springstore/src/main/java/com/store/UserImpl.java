@@ -1,10 +1,9 @@
-package com.example.store.service;
+package com.store;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entity.User;
-import repository.UserRepository;
+
 
 @Service
 public class UserImpl implements UserService {

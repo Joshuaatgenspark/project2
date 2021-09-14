@@ -1,8 +1,8 @@
-package com.example.store.service;
+package com.store;
 
 import org.springframework.stereotype.Service;
 
-import entity.User;
+
 
 @Service
 public interface UserService {
