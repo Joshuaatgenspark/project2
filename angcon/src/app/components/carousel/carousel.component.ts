@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { RawgDataService } from 'src/app/services/rawg-data.service';
 
 
 
@@ -9,11 +10,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  images = 'https://api.rawg.io/api/games/{game_pk}/screenshots?6d9368c98b03417d9a0cab226f150dc0';
 
-  constructor() { }
+
+  public games: any
+
+  constructor(private rawgDataService: RawgDataService, private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    this.rawgDataService.getGames().subscribe(gameList => this.games = gameList.results)
   }
 
 }
