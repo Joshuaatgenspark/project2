@@ -9,12 +9,12 @@ import { RawgDataService } from 'src/app/services/rawg-data.service';
 })
 export class GameCardsComponent implements OnInit {
 
-  public games: any = [];
+  public games: any;
 
   constructor(private rawgDataService: RawgDataService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.rawgDataService.getGames().subscribe( response => {this.games = response.data;})
+    this.rawgDataService.getGames().subscribe( gameList => this.games = gameList.results)
   }
 
 }
