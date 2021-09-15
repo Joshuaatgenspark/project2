@@ -8,8 +8,12 @@ import {UserListComponent} from "./components/user-list/user-list.component";
 import {UserFormComponent} from "./components/user-form/user-form.component";
 import {UserService} from "./services/user.service";
 import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './components/carousel/carousel.component';
+
+import { GameCardsComponent } from './components/game-cards/game-cards.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     UserListComponent,
     UserFormComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    GameCardsComponent
+
   ],
   imports: [
     BrowserModule,
