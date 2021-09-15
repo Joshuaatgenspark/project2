@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  images = 'https://api.rawg.io/api/games/{game_pk}/screenshots?6d9368c98b03417d9a0cab226f150dc0';
+  images = 'https://rawg.io/api/games?page=1&page_size=3&key=6d9368c98b03417d9a0cab226f150dc0';
 
   constructor() { }
 
