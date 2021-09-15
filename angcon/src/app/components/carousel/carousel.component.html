@@ -1,0 +1,11 @@
+<ngb-carousel *ngIf="games">
+    <ng-template ngbSlide *ngFor="let game of games">
+      
+        <div class="pic-img-wrap" >
+          <img src = "{{game.background_image}}" alt="newest game" width="100%" height="100%">
+        </div>
+      <div class="carousel-caption">
+          <h3>{{game.name}}</h3>
+      </div>
+  </ng-template>
+</ngb-carousel>
