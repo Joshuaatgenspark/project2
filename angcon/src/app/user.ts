@@ -1,5 +1,4 @@
-export class User {
-    // id: string;
-    // name: string;
-    // email: string;
+export interface IUser {
+    name: string;
+    email: string;
 }
