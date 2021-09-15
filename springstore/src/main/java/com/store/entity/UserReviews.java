@@ -14,14 +14,23 @@ import lombok.ToString;
 @ToString
 public class UserReviews {
 
+    /**
+     * Review ID is the internal counter for each review a user makes It is also the
+     * primary key to the UserReviews Database
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int reviewID;
+    private long reviewID;
 
-    //may need a hibernate annotation to link user to user table
+    // may need a hibernate annotation to link user to user table
     private String userName;
 
-    @Column(name= "game_review", columnDefinition = "varchar(1337)" )
+    // game title of each review
+    @Column(name="game_title") 		
+    private String gameTitle;
+
+    // user review
+    @Column(name = "game_review", columnDefinition = "varchar(1337)")
     private String review;
 
 }

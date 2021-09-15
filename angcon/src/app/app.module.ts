@@ -12,6 +12,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GameCardsComponent } from './components/game-cards/game-cards.component';
 import { UserService } from './services/user.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './components/login/login.component';
+
 import { CarouselComponent } from './components/carousel/carousel.component';
 
 
@@ -22,6 +24,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     UserFormComponent,
     NavbarComponent,
     SidebarComponent,
+    LoginComponent,
     CarouselComponent,
     GameCardsComponent
 

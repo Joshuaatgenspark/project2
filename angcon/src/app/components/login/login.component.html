@@ -1,0 +1,30 @@
+
+<div class="login-box bg-dark">
+  <h2>Login</h2>
+  <form #loginForm="ngForm">
+    <div class="user-box">
+      <input type="text" name="username" required="true" />
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="true" />
+      <label>Password</label>
+    </div>
+    <!-- submit link needs to go to servlet and do something?
+        or can we get away with just ts for user auth and app guard-->
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Login
+    </a>
+    <a routerlink="/adduser">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Register
+    </a>
+  </form>
+</div>

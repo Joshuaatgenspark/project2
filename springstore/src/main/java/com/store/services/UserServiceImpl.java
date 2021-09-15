@@ -9,6 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.store.entity.User;
 import com.store.repositories.UserRepository;
 
+/**
+ * 
+ * This is the User Service Implementation class
+ * it allows the application to access the database
+ * to save an User account, update an User Account,
+ * and list all Users
+ * 
+ * @author Nicky Kayyarath
+ *
+ */
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -23,11 +34,15 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User updateUser(long uId, User user) {
-		// Checks DB and updates name if name is not null or empty string
+		// Checks DB and updates user name and password if user name and password is not null or empty string
         User userDB = userRepo.findById(uId).get();
         
-        if(Objects.nonNull(user.getName()) && !"".equalsIgnoreCase(user.getName())){
-            userDB.setName(user.getName());
+        if(Objects.nonNull(user.getUserName()) && !"".equalsIgnoreCase(user.getUserName())){
+            userDB.setUserName(user.getUserName());
+        }
+        
+        if(Objects.nonNull(user.getPassword()) && !"".equalsIgnoreCase(user.getPassword())) {
+        	userDB.setPassword(user.getPassword());
         }
         
 		return userRepo.save(userDB);
