@@ -15,6 +15,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { GameCardsComponent } from './components/game-cards/game-cards.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
