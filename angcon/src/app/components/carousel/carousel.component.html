@@ -1,26 +1,11 @@
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-        <div class="pic-img-wrap">
-          <img [src] = "images" alt="newest game">
+<ngb-carousel *ngIf="games">
+    <ng-template ngbSlide *ngFor="let game of games">
+      
+        <div class="pic-img-wrap" >
+          <img src = "{{game.background_image}}" alt="newest game" width="100%" height="100%">
         </div>
       <div class="carousel-caption">
-          <h3>Game title goes here</h3>
+          <h3>{{game.name}}</h3>
       </div>
-    </ng-template>
-  <ng-template ngbSlide>
-    <div class="pic-img-wrap">
-      <img [src] = "images" alt="2nd newest game">
-    </div>
-    <div class="carousel-caption">
-      <h3>Game title goes here</h3>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="pic-img-wrap">
-      <img [src] = "images" alt="3rd newest game">
-    </div>
-    <div class="carousel-caption">
-      <h3>Game title goes here</h3>
-    </div>
   </ng-template>
 </ngb-carousel>
