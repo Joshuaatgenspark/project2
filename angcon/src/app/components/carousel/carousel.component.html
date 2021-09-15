@@ -1,0 +1,26 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <div class="pic-img-wrap">
+          <img [src] = "images" alt="newest game">
+        </div>
+      <div class="carousel-caption">
+          <h3>Game title goes here</h3>
+      </div>
+    </ng-template>
+  <ng-template ngbSlide>
+    <div class="pic-img-wrap">
+      <img [src] = "images" alt="2nd newest game">
+    </div>
+    <div class="carousel-caption">
+      <h3>Game title goes here</h3>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="pic-img-wrap">
+      <img [src] = "images" alt="3rd newest game">
+    </div>
+    <div class="carousel-caption">
+      <h3>Game title goes here</h3>
+    </div>
+  </ng-template>
+</ngb-carousel>
