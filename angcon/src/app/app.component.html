@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<app-game-cards></app-game-cards>
+<!-- <app-game-cards></app-game-cards> -->
 
 <div class="container">
   <div class="row">
@@ -8,8 +8,8 @@
     <div class="col">
       <app-sidebar></app-sidebar>
     </div>
-    <div class="col">
-      <div class="card bg-dark my-5">
+    <div class="col-9">
+      <!-- <div class="card bg-dark my-5">
         <div class="card-body">
           <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
           <ul class="text-center list-inline py-3">
@@ -21,10 +21,34 @@
                 </li>
           </ul>
         </div>
-        
+      </div> -->
+       <div class="row">
+        <div class="col">
+          <app-carousel></app-carousel>
+        </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <app-game-cards></app-game-cards>
+        </div>
+      </div>
+
       <router-outlet></router-outlet>
     </div>
   </div>
+  <!-- <div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <app-carousel></app-carousel>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+      <app-game-cards></app-game-cards>
+    </div>
+  </div> -->
 </div>
-<app-carousel></app-carousel>
+
+<!-- <app-carousel></app-carousel>
+<app-game-cards></app-game-cards> -->
