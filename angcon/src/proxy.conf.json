@@ -1,6 +1,7 @@
 {
-  "/api": {
-    "target": "http://localhost:9090",
-    "secure": false
+  "/api/*": {
+    "target": "https://rawg.io/api/games?page=1&page_size=3&key=6d9368c98b03417d9a0cab226f150dc0",
+    "secure": false,
+    "logLevel": "debug"
   }
 }
