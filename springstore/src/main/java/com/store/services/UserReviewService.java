@@ -12,5 +12,5 @@ public interface UserReviewService {
 
 	List<UserReviews> getAllUserReviews();
 
-	UserReviews updateReview(int reviewID, UserReviews userReview);
+	UserReviews updateReview(long reviewID, UserReviews userReview);
 }

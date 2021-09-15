@@ -32,4 +32,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  The base url is: https://api.rawg.io/api/ 
  All requests must be pair with the API key: 6d9368c98b03417d9a0cab226f150dc0
 
+Below is an example of how to your the API key to generate all the games from the API
+ https://api.rawg.io/api/genres?key=6d9368c98b03417d9a0cab226f150dc0
+
  For all the various way retrieve information from the api follow the documentation on https://api.rawg.io/docs/
