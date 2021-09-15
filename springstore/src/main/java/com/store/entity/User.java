@@ -16,19 +16,20 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table( uniqueConstraints = @UniqueConstraint(
-                name = "email_unique",
-                columnNames = "email"
-        ))
+@Table(uniqueConstraints = { @UniqueConstraint(name = "email_unique", columnNames = "email"),
+                             @UniqueConstraint(name = "userName_unique", columnNames = "username") })
 public class User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private String name;
-	@Column(
-            name = "email",
-            nullable = false
-    )
-	private String email;
+        // auto generated user ID number
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private Long id;
+
+        // user chosen username must be unique;
+        @Id
+        private String userName;
+
+        @Column(name = "email", nullable = false)
+        private String email;
+
+        private String password;
 }
