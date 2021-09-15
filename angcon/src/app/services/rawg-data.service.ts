@@ -12,7 +12,10 @@ export class RawgDataService {
   }
 
   constructor(private http: HttpClient) { }
-
+  /**
+   * 
+   * @returns observable of one page of games populated with 20 games
+   */
   getGames(): Observable<any>{
     return this.http.get<any>(this.ENDPOINTS.GAME_LIST_URL);
   }
