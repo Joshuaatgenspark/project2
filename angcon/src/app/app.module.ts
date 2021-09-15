@@ -8,13 +8,15 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './user.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { GameCardsComponent } from './components/game-cards/game-cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    GameCardsComponent
   ],
   imports: [
     BrowserModule,
