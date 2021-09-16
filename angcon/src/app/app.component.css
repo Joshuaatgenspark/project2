@@ -1,0 +1,18 @@
+.container{
+    margin-left: 0px;
+}
+.row{
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 800px){
+    .container{
+        margin: auto;
+        padding: 5px;
+    }
+
+    div.cardBody{
+        position: relative;
+    }
+}
