@@ -12,9 +12,19 @@ import { GameCardsComponent } from './components/game-cards/game-cards.component
 import { UserService } from './services/user.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
-
+import {ReactiveFormsModule} from "@angular/forms";
 import { CarouselComponent } from './components/carousel/carousel.component';
+
 import { FooterComponent } from './components/footer/footer.component';
+
+import { ReviewSubmitComponent } from './components/review-submit/review-submit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+
+
 
 
 
@@ -26,7 +36,10 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     CarouselComponent,
     GameCardsComponent,
-    FooterComponent
+    FooterComponent,
+    ReviewSubmitComponent
+
+
 
   ],
   imports: [
@@ -34,7 +47,13 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
