@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class RawgDataService {
 
   private ENDPOINTS = {
-    GAME_LIST_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=32',
+    GAME_LIST_DESKTOP_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=32',
     GAME_LIST_MOBILE_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=4',
     GAME_LIST_TABLET_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=12',
     GAME_LIST_LAPTOP_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=20',
@@ -22,7 +22,7 @@ export class RawgDataService {
    * @returns observable of one page of games populated with 20 games
    */
   getGamesDesktopView(): Observable<any>{
-    return this.http.get<any>(this.ENDPOINTS.GAME_LIST_URL);
+    return this.http.get<any>(this.ENDPOINTS.GAME_LIST_DESKTOP_URL);
   }
   getGamesMobileView(): Observable<any>{
     return this.http.get<any>(this.ENDPOINTS.GAME_LIST_MOBILE_URL);
