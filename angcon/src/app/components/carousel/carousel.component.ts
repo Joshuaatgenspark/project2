@@ -17,7 +17,7 @@ export class CarouselComponent implements OnInit {
   constructor(private rawgDataService: RawgDataService, private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
-    this.rawgDataService.getGames().subscribe(gameList => this.games = gameList.results)
+    this.rawgDataService.getNewGames().subscribe(gameList => this.games = gameList.results)
   }
 
 }
