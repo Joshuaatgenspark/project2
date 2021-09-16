@@ -16,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
