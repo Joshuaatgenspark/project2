@@ -3,7 +3,7 @@
   <div class="col-md-3" *ngFor="let game of games">
     <div class="card text-white bg-dark" style="height: 90%; width: 100%;" >
       <img src="{{ game.background_image }}" class="card-img-top" alt="..." style="width: 100%; height: 200px;" />
-      <div class="card-body">
+      <div class="card-body text-center" style="height: 100px;">
         <a class="card-text" routerLink="/games/{{ game.slug }}">{{ game.name }}</a>
 
       </div>

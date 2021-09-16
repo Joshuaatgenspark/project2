@@ -22,41 +22,40 @@ export class GameCardsComponent implements OnInit {
   public genres: any;
 
 
-  public key = ""
-
-  constructor(private rawgDataService: RawgDataService, private router: Router) { }
+  constructor(private rawgDataService: RawgDataService, private router: Router, private genreServiceService: GenreServiceService) { }
 
 
   public innerWidth: any;
 
   ngOnInit(): void {
-    // this.rawgDataService.getGames().subscribe( gameList => this.games = gameList.results)
+    this.innerWidth = window.innerWidth;
+    
+    /*
+        Based on the users screen size, the number of cards displayed is altered    
+    */
+        if(this.innerWidth < 400 ){
+          this.rawgDataService.getGamesMobileView().subscribe( gameList => this.games = gameList.results)
+        } else if(this.innerWidth <= 1000 && this.innerWidth >= 768){
+          this.rawgDataService.getGamesTabletView().subscribe( gameList => this.games = gameList.results)
+        } else if(this.innerWidth <= 1600 && this.innerWidth >= 1024){
+          this.rawgDataService.getGamesLaptopView().subscribe( gameList => this.games = gameList.results)
+        } else {
+        this.rawgDataService.getGamesDesktopView().subscribe( gameList => this.games = gameList.results)
+        }
+
     this.rawgDataService.getGenres().subscribe(genreList => this.genres = genreList.results)
   }
 
   
   onClick(slug: any){
    this.rawgDataService.getGamesByGenre(slug).subscribe( gameList => this.games = gameList.results)
-   console.log(name);
   //  this.rawgDataService.getGenres().subscribe(genreList => this.videogames = genreList.results.games)
   }
   onClickStrategy(){
     this.genreServiceService.getGamesByStrategy().subscribe(gameList => this.games = gameList.results)
     
-    this.innerWidth = window.innerWidth;
+   
 
-    /*
-        Based on the users screen size, the number of cards displayed is altered    
-    */
-    if(this.innerWidth < 400 ){
-      this.rawgDataService.getGamesMobileView().subscribe( gameList => this.games = gameList.results)
-    } else if(this.innerWidth <= 1000 && this.innerWidth >= 768){
-      this.rawgDataService.getGamesTabletView().subscribe( gameList => this.games = gameList.results)
-    } else if(this.innerWidth <= 1600 && this.innerWidth >= 1024){
-      this.rawgDataService.getGamesLaptopView().subscribe( gameList => this.games = gameList.results)
-    } else {
-    this.rawgDataService.getGamesDesktopView().subscribe( gameList => this.games = gameList.results)
-    }
   }
 
   onGameSelect(game: any){
