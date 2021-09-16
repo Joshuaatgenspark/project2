@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -24,7 +25,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     SidebarComponent,
     LoginComponent,
     CarouselComponent,
-    GameCardsComponent
+    GameCardsComponent,
+    FooterComponent
 
   ],
   imports: [
