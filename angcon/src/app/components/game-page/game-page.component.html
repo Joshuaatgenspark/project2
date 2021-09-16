@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-center">{{ gameDetails.name }}</h1>
+    </div>
+  </div>
+<div class="row">
+<aside class="col-lg-3">
+<img src="{{ gameDetails.background_image }}" alt="" style="height: 500px; width: 100%;">
+<ul class="list-group" style="width: 100%;">
+    <li class="list-group-item" style="font-weight: bold;">Released: {{ gameDetails.released }}</li>
+    <li class="list-group-item" style="font-weight: bold;">Metacritic Score: {{ gameDetails.metacritic }}</li>
+    <li class="list-group-item" style="text-decoration: underline;">Platforms</li>
+    <li *ngFor="let platform of platforms" class="list-group-item">{{ platform.platform.name }}</li>
+</ul>
+</aside>
+<p class="col-sm-9">{{ gameDetails.description_raw }}</p>
+</div>
+

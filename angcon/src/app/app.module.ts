@@ -15,6 +15,10 @@ import { LoginComponent } from './components/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { CarouselComponent } from './components/carousel/carousel.component';
 
+import { GamePageComponent } from './components/game-page/game-page.component';
+import { HomeComponent } from './components/home/home.component';
+
+
 import { FooterComponent } from './components/footer/footer.component';
 
 import { ReviewSubmitComponent } from './components/review-submit/review-submit.component';
@@ -36,6 +40,10 @@ import {MatIconModule} from "@angular/material/icon";
     LoginComponent,
     CarouselComponent,
     GameCardsComponent,
+
+    GamePageComponent,
+    HomeComponent,
+
     FooterComponent,
     ReviewSubmitComponent
 
