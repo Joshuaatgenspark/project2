@@ -13,8 +13,19 @@ export class GameCardsComponent implements OnInit {
 
   constructor(private rawgDataService: RawgDataService, private route: ActivatedRoute) { }
 
+  public innerWidth: any;
+
   ngOnInit(): void {
-    this.rawgDataService.getGames().subscribe( gameList => this.games = gameList.results)
+    this.innerWidth = window.innerWidth;
+    if(this.innerWidth < 400 ){
+      this.rawgDataService.getGamesMobileView().subscribe( gameList => this.games = gameList.results)
+    } else if(this.innerWidth <= 1000 && this.innerWidth >= 768){
+      this.rawgDataService.getGamesTabletView().subscribe( gameList => this.games = gameList.results)
+    } else if(this.innerWidth <= 1600 && this.innerWidth >= 1024){
+      this.rawgDataService.getGamesLaptopView().subscribe( gameList => this.games = gameList.results)
+    } else {
+    this.rawgDataService.getGamesDesktopView().subscribe( gameList => this.games = gameList.results)
+    }
   }
 
 }
