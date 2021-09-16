@@ -1,0 +1,45 @@
+.footerblock {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  position: relative;
+}
+#footer-bg {
+  background-color: #292b2c;
+}
+.footer-icon {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.icon-dcord,
+.icon-fb,
+.icon-tw,
+.icon-ig {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.soc-med {
+  color: white;
+  padding-top: 2rem;
+}
+.footer-links {
+  padding-left: 32.6%;
+  text-align: center;
+  display: inline-block;
+}
+.footer-link {
+  padding: 1rem;
+}
+.rr {
+  color: white;
+  text-align: center;
+}
+hr {
+  background-color: white;
+  width: 30%;
+}
