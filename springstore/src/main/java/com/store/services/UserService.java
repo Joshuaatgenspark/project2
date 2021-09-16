@@ -1,14 +1,29 @@
 package com.store.services;
 
-import java.util.List;
+import com.store.entity.UserEntity;
+import com.store.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import org.springframework.stereotype.Service;
-import com.store.entity.User;
+public class UserService {
 
+    @Autowired
+    private UserRepository userRepository;
 
-@Service
-public interface UserService {
-	User saveUser(User user);
-	User updateUser(long uId, User user);
-	List<User> listUsers();
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    public UserEntity saveUser(final UserDto userData){
+        UserEntity userModel = populateUserData(userData);
+        return userRepository.save(userModel);
+    }
+
+    private UserEntity populateUserData(final UserDto userData){
+        UserEntity user = new UserEntity();
+        user.setFirstName(userData.getFirstName());
+        user.setLastName(userData.getLastName());
+        user.setEmail(userData.getEmail());
+        user.setPassword(passwordEncoder.encode(userData.getPassword()));
+        return user;
+    }
 }
