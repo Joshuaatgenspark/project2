@@ -16,6 +16,8 @@ import { LoginComponent } from './components/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ReviewSubmitComponent } from './components/review-submit/review-submit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { ReviewSubmitComponent } from './components/review-submit/review-submit.
     HttpClientModule,
     FormsModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
