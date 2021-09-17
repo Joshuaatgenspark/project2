@@ -29,3 +29,10 @@
     width:150px;
     height: auto;
 }
+a{
+    color: white;
+}
+.card{
+    margin-left: 30px;
+    margin-right: 80px;
+}

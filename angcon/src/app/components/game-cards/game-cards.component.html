@@ -1,21 +1,17 @@
-<!-- <div class="container"> -->
   <h1> {{name}}</h1>
   <div class="row">
-    <div class="col-xl-2">
-      <!-- This is the code for the sidebar  -->
+    <div class="col-lg-1">
       <div class="list-group">
         <a class="list-group-item list-group-item-action bg-dark" (click)="onClick(genre.slug)"
           *ngFor="let genre of genres">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{ genre.name }}</h5>
           </div>
-          <!-- <p class="mb-1">Fight for your life in epic fashion.</p>
-          <small class="text-muted">Withcer 3: Wild Hunt</small> -->
+
         </a>
       </div>
     </div>
-
-    <div class="col-xl-10">
+    <div class="col-lg-11">
     <div class="row">
       <div class="col-md-3" *ngFor="let game of games">
         <div class="card text-white bg-dark" style="height: 90%; width: 100%;">
@@ -27,4 +23,3 @@
         </div>
       </div>
     </div>
-  <!-- </div> -->
