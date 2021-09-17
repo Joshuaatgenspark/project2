@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import{ ActivatedRoute} from '@angular/router';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import{ Router, ActivatedRoute} from '@angular/router';
+import { GenreServiceService } from 'src/app/services/genre-service.service';
+
+
 
 
 @Component({
@@ -9,16 +12,20 @@ import{ ActivatedRoute} from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
 
-  
+  @Output()
+  event = new EventEmitter();
 
-  genreName: any;
-  genres: any;
+  genreName ='action';
+  games: any;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private genreServiceService: GenreServiceService, private router: Router) { }
 
   ngOnInit(): void {
+    this.genreServiceService.getGamesByGenre(this.genreName).subscribe( gameList => this.games = gameList.results)
+  }
 
-    
+  onClick(){
+    this.event.emit(this.genreServiceService.getGamesByGenre(this.genreName).subscribe( gameList => this.games = gameList.results))
   }
 
 }
