@@ -28,7 +28,8 @@
   padding-top: 2rem;
 }
 .footer-links {
-  padding-left: 32.6%;
+  /* Might try 32.6% */
+  padding-left: 27%; 
   text-align: center;
   display: inline-block;
 }
