@@ -15,7 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-
+import { AppService} from "./services/app.service";
 
 
 @NgModule({
@@ -27,7 +27,6 @@ import { RegistrationComponent } from './components/registration/registration.co
     CarouselComponent,
     GameCardsComponent,
     RegistrationComponent
-
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     FormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
