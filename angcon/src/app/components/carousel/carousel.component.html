@@ -2,7 +2,7 @@
     <ng-template ngbSlide *ngFor="let game of games">
       
         <div class="pic-img-wrap" >
-          <img src = "{{game.background_image}}" alt="newest game" width="100%" height="100%">
+          <img src = "{{game.background_image}}" alt="newest game" width="70%" height="600px">
         </div>
       <div class="carousel-caption">
           <a routerLink="/games/{{ game.slug }}">{{game.name}}</a>
