@@ -7,7 +7,8 @@
   position: relative;
 }
 #footer-bg {
-  background-color: #292b2c;
+  /* background-color: #292b2c; */
+  background-color: #3F0071;
 }
 .footer-icon {
   margin-left: auto;
@@ -33,7 +34,9 @@
   text-align: center;
   display: inline-block;
 }
+
 .footer-link {
+  color: white;
   padding: 1rem;
 }
 .rr {
