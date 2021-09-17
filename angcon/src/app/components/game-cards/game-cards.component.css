@@ -1,15 +1,23 @@
 .container{
     width: 100%;
+
     
 }
 
 .row{
     width: 100%;
+   
 }
 
 .list-group{
     margin-top: 0px;
     margin-left: 0;
+
+    /* position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    overflow-x: hidden; */
 }
 .list-group-item h5{
     color: rgb(60, 172, 60);
