@@ -18,7 +18,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.platformService.getPlatforms().subscribe((data) => {
       this.platforms = data.results;
-      console.log(this.platforms)
     });
   }
 }

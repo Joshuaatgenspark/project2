@@ -1,15 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UserLogin } from 'src/app/model/user-login';
+import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  user = new UserLogin('', '');
 
-  constructor() { }
+  message = '';
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute,
+    private loginService: LoginService
+  ) {}
+
+  ngOnInit(): void {}
+
+  loginSubmit(user: any) {
+    this.loginService.loginUser(this.user).subscribe(
+      (data) => {
+        console.log(this.user);
+        this.message = 'Login Successful';
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+      },
+
+      (error) => {
+        console.log(this.user);
+        this.message = 'Please check your credentials';
+        console.log('error');
+      }
+    );
   }
-
 }
