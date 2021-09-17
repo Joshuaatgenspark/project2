@@ -1,30 +1,52 @@
-
 <div class="login-box bg-dark">
   <h2>Login</h2>
-  <form #loginForm="ngForm">
+  <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)">
     <div class="user-box">
-      <input type="text" name="username" required="true" />
+      <input
+        type="text"
+        name="username"
+        required="true"
+        #username="ngModel"
+        [class.is-invalid]="username.invalid && username.touched"
+        [(ngModel)]="user.username"
+      />
       <label>Username</label>
     </div>
     <div class="user-box">
-      <input type="password" name="password" required="true" />
+      <input
+        type="password"
+        name="password"
+        required="true"
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+        [(ngModel)]="user.password"
+      />
       <label>Password</label>
     </div>
-    <!-- submit link needs to go to servlet and do something?
-        or can we get away with just ts for user auth and app guard-->
-    <a href="#">
+
+    <div *ngIf="password.errors && (password.invalid || password.touched)">
+      <small class="text-danger pw-err" *ngIf="password.errors.required">
+        Password is required to Login
+      </small>
+    </div>
+    <a>
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Login
+      <input
+        type="submit"
+        value="S U B M I T"
+        class="btn"
+        style="color: #03e9f4"
+      />
     </a>
-    <a routerlink="/adduser">
+    <a routerlink="/adduser" style="height: 56px">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Register
+      <p style="margin-top: 5px">Register</p>
     </a>
   </form>
 </div>
