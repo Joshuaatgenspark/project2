@@ -1,5 +1,14 @@
+.container{
+    width: 100%;
+    
+}
+
+.row{
+    width: 100%;
+}
+
 .list-group{
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 0;
 }
 .list-group-item h5{
