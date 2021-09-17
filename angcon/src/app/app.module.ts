@@ -16,6 +16,8 @@ import { LoginComponent } from './components/login/login.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { AppService} from "./services/app.service";
+import { HomeComponent } from './components/home/home.component';
+import {RestapiService} from "./services/rest/restapi.service";
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { AppService} from "./services/app.service";
     LoginComponent,
     CarouselComponent,
     GameCardsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { AppService} from "./services/app.service";
     FormsModule,
     NgbModule
   ],
-  providers: [AppService],
+  providers: [RestapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
