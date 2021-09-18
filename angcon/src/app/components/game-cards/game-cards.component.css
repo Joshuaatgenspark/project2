@@ -1,11 +1,16 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+
 .row{
     width: 100%;
-    
+
 }
 
 .list-group{
-    border-style: solid, 1px, #150050;
-    margin-top: 0px;
+    border-style: solid;
+    margin-top: 0;
     margin-left: 0;
 
     /* position: fixed;
@@ -21,7 +26,7 @@
 
 .list-group-item{
     background-color: #3F0071;
-    border-style: solid 1px #150050;
+    border-style: solid;
     color:white;
     width:150px;
     height: auto;
@@ -40,3 +45,4 @@ a{
     margin-left: 30px;
     margin-right: 80px;
 }
+

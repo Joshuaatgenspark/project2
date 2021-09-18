@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { GenreServiceService } from 'src/app/services/genre-service.service';
 
 import { RawgDataService } from 'src/app/services/rawg-data.service';
+import {Tile} from "@angular/material/grid-list/tile-coordinator";
 
 @Component({
   selector: 'app-game-cards',
@@ -29,9 +30,9 @@ export class GameCardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
-    
+
     /*
-        Based on the users screen size, the number of cards displayed is altered    
+        Based on the users screen size, the number of cards displayed is altered
     */
         if(this.innerWidth < 400 ){
           this.rawgDataService.getGamesMobileView().subscribe( gameList => this.games = gameList.results)
@@ -46,15 +47,15 @@ export class GameCardsComponent implements OnInit {
     this.rawgDataService.getGenres().subscribe(genreList => this.genres = genreList.results)
   }
 
-  
+
   onClick(slug: any){
    this.rawgDataService.getGamesByGenre(slug).subscribe( gameList => this.games = gameList.results)
   //  this.rawgDataService.getGenres().subscribe(genreList => this.videogames = genreList.results.games)
   }
   onClickStrategy(){
     this.genreServiceService.getGamesByStrategy().subscribe(gameList => this.games = gameList.results)
-    
-   
+
+
 
   }
 
