@@ -22,7 +22,18 @@
         >
       </li>
       <li class="nav-item dropdown">
-        <a
+
+        <button mat-button[matMenuTriggerFor]="platforms">Platforms</button>
+        <mat-menu *ngFor="let platform of platforms" #platforms="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="platform">{{platform.name}}</button>
+        </mat-menu>
+        <mat-menu *ngFor="let sub of platforms.platforms" #sub="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="sub">{{sub.nam}}</button>
+        </mat-menu>
+        </li>
+        <!-- </ul> -->
+        
+          <!-- <a
           class="nav-link dropdown-toggle"
           href="#"
           id="navbarScrollingDropdown"
@@ -32,17 +43,23 @@
         >
           Platform
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-          <li>
+        <ul class="platforms dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <li> 
             <a
-              class="dropdown-item"
+              
               href="#"
+              class="dropdown-item"
               *ngFor="let platform of platforms"
-              >{{ platform.name }}</a
               >
+              {{ platform.name }}
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li>
+                  <a class="dropdown-item " *ngFor="let sub of platform.platforms">{{ sub.name }}</a>
           </li>
         </ul>
-      </li>
+      </a>
+      </li>  -->
+      </ul>
       <li class="nav-item">
         <a class="nav-link" routerLink="/profile" tabindex="-1" aria-disabled="true"
           >Profile</a
@@ -51,6 +68,6 @@
       <li class="nav-item">
         <a routerLink="/login" class="nav-link">Login</a>
       </li>
-    </ul>
+    <!-- </ul> -->
   </div>
 </nav>
