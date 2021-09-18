@@ -1,6 +1,42 @@
 ul{
     list-style: none;
 }
-.description{
-    float: right;
+p{
+    color: white;
+}
+.card-body{
+    background-color: black;
+}
+.card{
+    margin-left: 80px;
+}
+.container{
+   margin: 10px;
+}
+.jumbotron{
+    background-color: #610094;
+    color: white;
+    height: 20%;
+}
+.list-group-item{
+    background-color: #610094;
+    border-style: solid 1px #150050;
+    color:white;
+
+    height: auto;
+}
+.user_review{
+    background-color: #610094;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 7px #3F0071;
+}
+.user_name{
+    font-weight: bolder;
+    border-bottom: solid 3px white;
+}
+.details{
+    border-radius: 5px;
+    box-shadow: 7px 7px #3F0071;
 }
