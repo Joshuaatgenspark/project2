@@ -16,7 +16,8 @@ body {
   padding: 40px;
   margin-bottom: 10%;
   transform: translate(-50%, -50%);
-  background: #292b2c;
+  background: #3F0071
+;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -59,7 +60,7 @@ body {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: white;
   font-size: 12px;
 }
 
@@ -67,7 +68,7 @@ body {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: white;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -78,12 +79,14 @@ body {
 }
 
 .login-box a:hover {
-  background: #03e9f4;
-  color: #fff;
+  background: orange;
+  color: red;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
+  box-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow,
+    0 0 100px yellow;
 }
+
+
 
 .login-box a span {
   position: absolute;
@@ -95,7 +98,7 @@ body {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
+  background: linear-gradient(90deg, transparent, yellow);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -114,7 +117,7 @@ body {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
+  background: linear-gradient(180deg, transparent, yellow);
   animation: btn-anim2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -134,7 +137,7 @@ body {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
+  background: linear-gradient(270deg, transparent, yellow);
   animation: btn-anim3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -154,7 +157,7 @@ body {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
+  background: linear-gradient(360deg, transparent, yellow);
   animation: btn-anim4 1s linear infinite;
   animation-delay: 0.75s;
 }
