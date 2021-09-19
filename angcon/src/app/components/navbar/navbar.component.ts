@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PlatformServiceService } from 'src/app/services/platformSerice/platform-service.service';
-import { RawgDataService } from 'src/app/services/rawg-data.service';
+import { PlatformServiceService } from 'src/app/services/platformService/platform-service.service';
+
 
 @Component({
   selector: 'app-navbar',

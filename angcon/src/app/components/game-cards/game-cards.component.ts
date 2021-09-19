@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 
 import { Component, OnInit, Output, EventEmitter,Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GenreServiceService } from 'src/app/services/genre-service.service';
+import { RawgDataService } from 'src/app/services/rawgData/rawg-data.service';
+import { GenreServiceService } from 'src/app/services/genreService/genre-service.service';
 
-import { RawgDataService } from 'src/app/services/rawg-data.service';
 
 @Component({
   selector: 'app-game-cards',

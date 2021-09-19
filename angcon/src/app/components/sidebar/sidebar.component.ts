@@ -1,6 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import{ Router, ActivatedRoute} from '@angular/router';
-import { GenreServiceService } from 'src/app/services/genre-service.service';
+import { GenreServiceService } from 'src/app/services/genreService/genre-service.service';
+
 
 
 

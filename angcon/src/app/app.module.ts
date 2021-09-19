@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router'
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { GameCardsComponent } from './components/game-cards/game-cards.component';
-import { UserService } from './services/user.service';
+import { UserService } from './services/user/user.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
