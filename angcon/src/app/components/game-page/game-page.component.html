@@ -1,18 +1,56 @@
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
       <h1 class="display-4 text-center">{{ gameDetails.name }}</h1>
-    </div>
   </div>
 <div class="row">
-<aside class="col-lg-3">
-<img src="{{ gameDetails.background_image }}" alt="" style="height: 500px; width: 100%;">
-<ul class="list-group" style="width: 100%;">
+<aside class="col-lg-3 ">
+<img src="{{ gameDetails.background_image }}" class="details" style="height: 500px; width: 100%;">
+<ul class="list-group details" style="width: 100%;">
     <li class="list-group-item" style="font-weight: bold;">Released: {{ gameDetails.released }}</li>
     <li class="list-group-item" style="font-weight: bold;">Metacritic Score: {{ gameDetails.metacritic }}</li>
     <li class="list-group-item" style="text-decoration: underline;">Platforms</li>
     <li *ngFor="let platform of platforms" class="list-group-item">{{ platform.platform.name }}</li>
 </ul>
 </aside>
-<p class="col-sm-9">{{ gameDetails.description_raw }}</p>
+<aside class="col-sm-9">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <p >{{ gameDetails.description_raw }}</p>
+      </div>
+    </div>
+  
+</div>
+  <!-- Start of review divs -->
+ <div class="row">
+   <!-- Div for review box -->
+    <div class="col-lg-6">
+      <app-review-submit></app-review-submit>
+    </div>
+    <!-- Div for user review section -->
+    <div class="col-lg-6">
+      <!-- Div for individual user reviews -->
+      <div class="user_review">
+      <p class="user_name">This is a placeholder area for user reviews</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        but also the leap into electronic typesetting, remaining essentially unchanged.
+         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="user_review">
+          <p class="user_name">This is a placeholder area for user reviews</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+            but also the leap into electronic typesetting, remaining essentially unchanged.
+             It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+    </div>
+  <div>
+
+</div>
+</div>
+</aside>
+
 </div>
 
