@@ -14,6 +14,7 @@ private key = '&key=6d9368c98b03417d9a0cab226f150dc0'
     GAME_LIST_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=5&ordering=-released&stores=11',
     GENRE_LIST_URL: 'https://rawg.io/api/genres?key=6d9368c98b03417d9a0cab226f150dc0&',
     GAME_GENRE_URL: 'https://rawg.io/api/games?genres=',
+   
     
 
     GAME_LIST_DESKTOP_URL: 'https://rawg.io/api/games?key=6d9368c98b03417d9a0cab226f150dc0&page=1&page_size=32',
@@ -55,4 +56,6 @@ private key = '&key=6d9368c98b03417d9a0cab226f150dc0'
   getNewGames(): Observable<any>{
     return this.http.get<any>(this.ENDPOINTS.NEW_GAMES_URL);
   }
+
+
 }

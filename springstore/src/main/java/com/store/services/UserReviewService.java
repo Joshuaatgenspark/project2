@@ -2,9 +2,10 @@ package com.store.services;
 
 import java.util.List;
 
+import com.store.entity.UserReviews;
 import org.springframework.stereotype.Service;
 
-import com.store.entity.UserReviews;
+
 
 @Service
 public interface UserReviewService {

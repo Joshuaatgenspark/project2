@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router'
+import { StripHtmlPipe } from './Pipes/striphtml';
 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -52,7 +53,9 @@ import { LoginService } from './services/login/login.service';
 
     FooterComponent,
     ReviewSubmitComponent,
-    RegisterComponent
+    RegisterComponent,
+
+    StripHtmlPipe
 
 
 
