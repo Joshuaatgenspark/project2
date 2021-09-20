@@ -26,6 +26,6 @@ public class FavoritesServiceImpl implements FavoritesService{
 
     @Override
     public List<Favorites> getFavoritesByUsername(String username) {
-        return (List<Favorites>) repository.findByUsername(username);
+        return (List<Favorites>) repository.findAllByUsername(username);
     }
 }

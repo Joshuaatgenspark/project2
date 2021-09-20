@@ -9,5 +9,5 @@ import java.util.List;
 public interface FavoritesService{
     Favorites saveFavorite(Favorites favorites);
     List<Favorites> getAllFavorites();
-    List<Favorites> getFavoritesByUsername(String userName);
+    List<Favorites> getFavoritesByUsername(String username);
 }

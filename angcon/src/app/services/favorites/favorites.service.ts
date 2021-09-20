@@ -6,7 +6,7 @@ import { Favorites } from 'src/app/model/favorites';
 @Injectable({
   providedIn: 'root'
 })
-export class FavoritesService {
+export class FavoritesService {  
 
   constructor(private http: HttpClient) { }
 
@@ -15,5 +15,9 @@ export class FavoritesService {
     console.log(favorite);
     return this.http.post<any>('http://localhost:9090/profile', favorite);
 
+  }
+
+  public listFavorites(username: any): Observable<any>{
+    return this.http.get<any>('http://localhost:9090/profile/' + username);
   }
 }

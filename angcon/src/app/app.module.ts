@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router'
 import { StripHtmlPipe } from './Pipes/striphtml';
+import { CommonModule } from '@angular/common';
 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -71,7 +72,8 @@ import { LoginService } from './services/login/login.service';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    CommonModule
   ],
   providers: [UserService, LoginService, RegisterService],
   

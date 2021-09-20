@@ -24,8 +24,9 @@ public class FavoritesController {
         return service.getAllFavorites();
     }
 
-    @GetMapping("/profile/{userName}")
-    public List<Favorites> getFavoritesByUserName(String userName){
-        return service.getFavoritesByUsername(userName);
+    @GetMapping("/profile/{username}")
+    public List<Favorites> getFavoritesByUserName(@PathVariable("username") String username){
+        System.out.println(username);
+        return (List<Favorites>) service.getFavoritesByUsername(username);
     }
 }
