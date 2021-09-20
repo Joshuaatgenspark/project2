@@ -1,12 +1,11 @@
 export class UserRegister {
-    username: string;
-    email: string;
-    password: string;
-  
-    constructor(username: string, email: string, password: string) {
-      this.username = username;
-      this.email = email;
-      this.password = password;
-    }
+  userName: string;
+  email: string;
+  password: string;
+
+  constructor(userName: string, email: string, password: string) {
+    this.userName = userName;
+    this.email = email;
+    this.password = password;
   }
-  
+}
