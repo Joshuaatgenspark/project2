@@ -40,3 +40,22 @@ a{
     margin-left: 30px;
     margin-right: 80px;
 }
+
+button{
+    background-color: #610094;
+    color: white;
+}
+
+.badge{
+    background-color: white;
+    color: #610094;
+}
+
+button:hover{
+    background-color: white;
+    color: #610094;
+}
+    button .badge:hover{
+        background-color: #610094;
+        color: white;
+    }

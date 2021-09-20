@@ -22,7 +22,7 @@ public class UserReviews {
     @SequenceGenerator(
             name = "review_sequence",
             sequenceName = "review_sequence",
-            allocationSize = 10000
+            allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,

@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface UserReviewRepository extends JpaRepository<UserReviews, Long>{
 
-    List<UserReviews> findAllByUserName(String userName);
     List<UserReviews> findAllByGameTitle(String gameTitle);
+    List<UserReviews> findAllByUserName(String userName);
 
 }
