@@ -5,14 +5,14 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { GameCardsComponent } from './components/game-cards/game-cards.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileDetailsComponent },
+  // { path: 'profile', component: ProfileDetailsComponent },
   { path: 'games/:slug', component: GamePageComponent },
 ];
 

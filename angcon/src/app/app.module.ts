@@ -37,6 +37,7 @@ import { LoginService } from './services/login/login.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +70,8 @@ import { LoginService } from './services/login/login.service';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [RegisterService, LoginService],
+  providers: [UserService, LoginService, RegisterService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

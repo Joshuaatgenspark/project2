@@ -11,4 +11,5 @@ public interface UserService {
 	User saveUser(User user);
 	User updateUser(long uId, User user);
 	List<User> listUsers();
+	User loginUser(String userName, String password);
 }
