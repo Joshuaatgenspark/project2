@@ -38,6 +38,16 @@ public class UserReviewServiceImpl implements UserReviewService {
 	}
 
 	@Override
+	public List<UserReviews> getReviewByTitle(String gameTitle) {
+		return uRRepository.findAllByGameTitle(gameTitle);
+	}
+
+	@Override
+	public List<UserReviews> getReviewsByUserName(String userName) {
+		return uRRepository.findAllByUserName(userName);
+	}
+
+	@Override
 	public List<UserReviews> getAllUserReviews() {
 		// retrieves all user reviews
 		return uRRepository.findAll();
@@ -71,10 +81,15 @@ public class UserReviewServiceImpl implements UserReviewService {
 	public UserReviews updateReview(long reviewID, UserReviews userReview) {
 		// Allows an User to update their own review.
 		UserReviews uRDB = uRRepository.findById(reviewID).get();
+		uRDB.setUserName(userReview.getUserName());
+		uRDB.setGameTitle(userReview.getGameTitle());
+		uRDB.setReview(userReview.getReview());
+
 
 		if (Objects.nonNull(userReview.getReview()) && !"".equalsIgnoreCase(userReview.getGameTitle())) {
 			uRDB.setReview(userReview.getReview());
 		}
+
 		return uRRepository.save(uRDB);
 	}
 

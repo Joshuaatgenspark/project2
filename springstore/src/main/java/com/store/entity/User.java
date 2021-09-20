@@ -1,12 +1,6 @@
 package com.store.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import javax.persistence.Column;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,15 +11,26 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(uniqueConstraints = { @UniqueConstraint(name = "email_unique", columnNames = "email"),
-                             @UniqueConstraint(name = "userName_unique", columnNames = "username") })
+                             @UniqueConstraint(name = "userName_unique", columnNames = "userName") })
 public class User {
 
         // auto generated user ID number
-        @GeneratedValue(strategy = GenerationType.AUTO)
+
+        @Id
+        @SequenceGenerator(
+                name = "user_sequence",
+                sequenceName = "user_sequence",
+                allocationSize = 1
+        )
+        @GeneratedValue(
+                strategy = GenerationType.SEQUENCE,
+                generator = "user_sequence"
+        )
+//        @GeneratedValue(strategy = GenerationType.AUTO)
         private Long id;
 
         // user chosen username must be unique;
-        @Id
+
         private String userName;
 
         @Column(name = "email", nullable = false)

@@ -10,6 +10,10 @@ import com.store.entity.UserReviews;
 public interface UserReviewService {
 	UserReviews saveReview(UserReviews review);
 
+	List<UserReviews> getReviewByTitle(String gameTitle);
+
+	List<UserReviews> getReviewsByUserName(String userName);
+
 	List<UserReviews> getAllUserReviews();
 
 	UserReviews updateReview(long reviewID, UserReviews userReview);
