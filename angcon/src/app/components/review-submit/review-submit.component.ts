@@ -14,6 +14,8 @@ export class ReviewSubmitComponent implements OnInit {
   user = new UserReview('', '','')
   message = ''
 
+  reviewMessage: any;
+
   title = localStorage.getItem('gameName')
 
   initvalue = '';
@@ -27,10 +29,13 @@ export class ReviewSubmitComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.user)
+    this.reviewMessage = JSON.stringify(this.review)
+    localStorage.setItem('review', this.reviewMessage)
     this.reviewsubmision.SubmitReview(this.user).subscribe(data => 
+      this.user)
+      this.message = "Review Submitted"
       
-      this.message = "Review Submitted",
-      )
   }
 
 }
