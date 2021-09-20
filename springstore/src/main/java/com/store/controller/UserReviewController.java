@@ -31,7 +31,7 @@ public class UserReviewController {
     }
 
     @GetMapping("/review/{userName}")
-    public List<UserReviews> getReviewsByUserName(@PathVariable("userName") String userName){
+    public List<UserReviews> getReviewsByUserName(@PathVariable("username") String userName){
         return userReviewService.getReviewsByUserName(userName);
     }
 

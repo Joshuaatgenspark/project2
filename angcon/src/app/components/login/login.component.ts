@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { UserLogin } from 'src/app/model/user-login';
 import { LoginService } from 'src/app/services/login/login.service';
 
@@ -15,18 +15,26 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
+
+  doLogin() {
+    this.loginService.loginUser(this.user).subscribe((data) => {
+      this.message = data;
+      this.router.navigate(['/home']);
+    });
+  }
 
   loginSubmit(user: any) {
     this.loginService.loginUser(this.user).subscribe(
       (data) => {
         console.log(this.user);
         this.message = 'Login Successful';
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
+        sessionStorage.setItem('token', user.username);
+        sessionStorage.setItem('user', JSON.stringify(user));
       },
 
       (error) => {
