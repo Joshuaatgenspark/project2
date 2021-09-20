@@ -30,7 +30,8 @@ export class ReviewSubmitComponent implements OnInit {
 
   onSubmit(){
     console.log(this.user)
-    this.reviewMessage = JSON.stringify(this.review)
+    console.log(this.review)
+    this.reviewMessage = JSON.stringify(this.review,)
     localStorage.setItem('review', this.reviewMessage)
     this.reviewsubmision.SubmitReview(this.user).subscribe(data => 
       this.user)
