@@ -29,7 +29,9 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import { RegisterComponent } from './components/register/register.component';
+import { RegisterService } from './services/register/register.service';
 import { LoginService } from './services/login/login.service';
+
 
 
 
@@ -68,7 +70,8 @@ import { LoginService } from './services/login/login.service';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [UserService, LoginService],
+  providers: [UserService, LoginService, RegisterService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

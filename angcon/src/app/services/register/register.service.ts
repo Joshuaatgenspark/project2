@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { UserLogin } from 'src/app/model/user-login';
-import { HttpHeaders } from '@angular/common/http';
+import { UserRegister } from 'src/app/model/user-register';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LoginService {
+export class RegisterService {
   constructor(private http: HttpClient) {}
 
-  public loginUser(user: UserLogin): Observable<any> {
+  public registerUser(user: UserRegister): Observable<any> {
     // localhost port number to be announced
-    return this.http.post<any>('http://localhost:9090/login', user);
+    console.log(user);
+    return this.http.post<any>('http://localhost:9090/register', user);
   }
 }
