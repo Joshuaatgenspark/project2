@@ -5,6 +5,8 @@ import { Component, OnInit, Output, EventEmitter,Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RawgDataService } from 'src/app/services/rawgData/rawg-data.service';
 import { GenreServiceService } from 'src/app/services/genreService/genre-service.service';
+import { Favorites } from 'src/app/model/favorites';
+import { FavoritesService } from 'src/app/services/favorites/favorites.service';
 
 
 @Component({
@@ -13,6 +15,10 @@ import { GenreServiceService } from 'src/app/services/genreService/genre-service
   styleUrls: ['./game-cards.component.css']
 })
 export class GameCardsComponent implements OnInit {
+  username = localStorage.getItem('username')
+  public favorites: any;
+  favorite: any;
+  message = ''
 
   public genreGames = [];
 
@@ -22,7 +28,10 @@ export class GameCardsComponent implements OnInit {
   public genres: any;
 
 
-  constructor(private rawgDataService: RawgDataService, private router: Router, private genreServiceService: GenreServiceService) { }
+  constructor(private rawgDataService: RawgDataService, 
+    private router: Router, 
+    private genreServiceService: GenreServiceService,
+    private favoritesService: FavoritesService) { }
 
 
   public innerWidth: any;
@@ -65,5 +74,19 @@ export class GameCardsComponent implements OnInit {
   SaveGameName(name: any){
     localStorage.setItem("gameName", name);
   }
+
+  onSelect(name:any){
+    this.favorites = name;
+    this.favorite = new Favorites(this.username, this.favorites);
+    console.log(localStorage.getItem('username'));
+    console.log(this.favorites);
+    this.favoritesService.userFavorite(this.favorite).subscribe(data => {
+      
+    }
+      )
+
+  }
+
+
 
 }

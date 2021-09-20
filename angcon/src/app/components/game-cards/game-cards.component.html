@@ -21,6 +21,10 @@
             (click)="SaveGameName(game.name)">{{ game.name }}</a>
 
           </div>
+          <button type="button" class="btn" (click)="onSelect(game.name)">
+            Add to Favorite <span class="badge">+</span>
+            <span class="sr-only">unread messages</span>
+          </button>
         </div>
       </div>
     </div>
