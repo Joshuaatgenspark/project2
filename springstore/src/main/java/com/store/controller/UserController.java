@@ -37,4 +37,11 @@ public class UserController {
 	public User updateUser(@PathVariable("id") long userId, @RequestBody User user) {
 		return service.updateUser(userId, user);
 	}
+
+	@PostMapping("/login")
+	public User loginUser(@RequestBody User user){
+		String userName = user.getUserName();
+		String password = user.getPassword();
+		return service.loginUser(userName, password);
+	}
 }
