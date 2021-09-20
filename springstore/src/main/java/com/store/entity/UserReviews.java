@@ -19,7 +19,16 @@ public class UserReviews {
      * primary key to the UserReviews Database
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(
+            name = "review_sequence",
+            sequenceName = "review_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "review_sequence"
+    )
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     private long reviewID;
 
     // may need a hibernate annotation to link user to user table
