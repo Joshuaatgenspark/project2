@@ -1,0 +1,57 @@
+<div class="login-box">
+    <h2>Register</h2>
+    <form #registerForm="ngForm" (ngSubmit)="registerSubmit(registerForm.value)">
+      <div class="user-box">
+        <input
+          type="text"
+          name="username"
+          required="true"
+          #username="ngModel"
+          [class.is-invalid]="username.invalid && username.touched"
+          [(ngModel)]="user.username"
+        />
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input
+          type="email"
+          name="email"
+          required="true"
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
+          [(ngModel)]="user.email"
+        />
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input
+          type="password"
+          name="password"
+          required="true"
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
+          [(ngModel)]="user.password"
+        />
+        <label>Password</label>
+      </div>
+  
+      <div *ngIf="password.errors && (password.invalid || password.touched)">
+        <small class="text-danger pw-err" *ngIf="password.errors.required">
+          Password is required to Register
+        </small>
+      </div>
+      <a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <input
+          type="submit"
+          value="S U B M I T"
+          class="btn"
+          style="color: white"
+        />
+      </a>
+    </form>
+  </div>
+  
