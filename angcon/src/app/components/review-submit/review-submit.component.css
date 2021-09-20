@@ -1,9 +1,14 @@
-.reviewform {
-}
+/* .reviewform {
+    
+} */
 
 .reviewform-full-width {
     width: 400px;
     color: white;
    
+}
+button{
+    color: white;
+    background-color:#610094 ;
 }
 

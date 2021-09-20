@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
 
   loginSubmit(user: any) {
     this.loginService.loginUser(this.user).subscribe(
-      (data) => {
+      data => {
         console.log(this.user);
         this.message = 'Login Successful';
-        localStorage.setItem('token', data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
+        localStorage.setItem('username', user.username);
+        localStorage.setItem('user', JSON.stringify(user));
       },
 
       (error) => {

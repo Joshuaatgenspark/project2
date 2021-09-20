@@ -62,4 +62,8 @@ export class GameCardsComponent implements OnInit {
     this.router.navigate(['/games', game.slug])
   }
 
+  SaveGameName(name: any){
+    localStorage.setItem("gameName", name);
+  }
+
 }
